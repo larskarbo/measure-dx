@@ -11,10 +11,7 @@ const BASE_URL = "http://localhost:3000";
 
 const go = async () => {
   const browser = await puppeteer.launch({
-    headless: false,
-    // headless: "new",
-    // open dev tools
-    devtools: true,
+    headless: "new",
   });
 
   for (let path of pathsToTest) {
