@@ -10,6 +10,25 @@ const BASE_URL = "http://127.0.0.1:3000";
 // const BASE_URL = "http://localhost:3010/";
 
 const go = async () => {
+  const testFetch = [
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "https://dev.larskarbo.eth",
+  ];
+
+  for (let url of testFetch) {
+    try {
+      let response = await fetch(url);
+      console.log(
+        `Status of ${url}: ${
+          response.ok ? chalk.green("Working") : chalk.red("Not Working")
+        }`
+      );
+    } catch (error) {
+      console.log(chalk.red(`Error fetching ${url}: ${error}`));
+    }
+  }
+
   const browser = await puppeteer.launch({
     headless: "new",
   });
