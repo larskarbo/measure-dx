@@ -3,7 +3,7 @@ import chalk from "chalk";
 
 const pathsToTest = ["/", "/quests/brave", "/dev.larskarbo.eth"];
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://127.0.0.1:3000";
 
 // const pathsToTest = ["/", "/app", "/user/larskarbo"];
 
